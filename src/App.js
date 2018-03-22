@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import InitialMap from './components/InitialMap'
+import ContainerMap from './components/ContainerMap'
+import {red500} from 'material-ui/styles/colors';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Header from './components/Header';
+
 import './App.css';
 
+
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: red500,
+  },
+  appBar: {
+    height: 50,
+  },
+});
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <InitialMap/>
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div className= 'App'>
+          <Header/>
+          <ContainerMap></ContainerMap>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
