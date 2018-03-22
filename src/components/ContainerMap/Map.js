@@ -19,6 +19,7 @@ const MyMapComponent = compose(
     {props.isMarkerShown && <Marker position={{ lat: -33.4569400, lng: -70.6482700 }} onClick={props.onMarkerClick} />}
   </GoogleMap>
 )
+
 class MapContainer extends React.PureComponent {
   state = {
     isMarkerShown: false,
@@ -44,4 +45,7 @@ class MapContainer extends React.PureComponent {
     )
   }
 }
+
 export default MapContainer;
+
+
