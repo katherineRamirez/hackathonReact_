@@ -4,7 +4,7 @@ export const GoogleApi = function(opts) {
   const apiKey = opts.apiKey;
   const libraries = opts.libraries ||  ['places'];
   const client = opts.client;
-  const URL = 'https://maps.googleapis.com/maps/api/js';
+  const URL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCUX7y8quzPshfWOVijN3nTir7k7Zux1Lg ';
 
   const googleVersion = '3.22';
   let script = null;

@@ -1,21 +1,24 @@
+import React from 'react';
+import {render} from 'react-dom';
+import GoogleApiComponent from './GoogleApiComponent';
+import Map from './Map';
 
-export class Container extends React.Component {
-  render() {
+class Container extends React.Component{
+
+  render(){
     const style = {
       width: '100vw',
       height: '100vh'
-    // if (!this.props.loaded) {
-    //   return <div>Loading...</div>
-    }
-    return (
-      <div style={style}>
-        <Map google={this.props.google}/>
+    };
 
+    return (
+      <div style={style} >
+        <Map google={this.props.google}/>
       </div>
-    )
+    );
   }
 }
 
 export default GoogleApiComponent({
-  apiKey: __GAPI_KEY__
-})(Container)
+  apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo'
+})(Container);
