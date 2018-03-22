@@ -24,7 +24,6 @@ class MapContainer extends React.PureComponent {
   state = {
     isMarkerShown: false,
   }
-
   componentDidMount() {
     this.delayedShowMarker()
   }
@@ -33,12 +32,10 @@ class MapContainer extends React.PureComponent {
       this.setState({ isMarkerShown: true })
     }, 3000)
   }
-
   handleMarkerClick = () => {
     this.setState({ isMarkerShown: false })
     this.delayedShowMarker()
   }
-
   render() {
     return (
       <MyMapComponent
@@ -48,4 +45,7 @@ class MapContainer extends React.PureComponent {
     )
   }
 }
+
 export default MapContainer;
+
+
