@@ -1,6 +1,6 @@
-import React from "react"
-import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import React from "react";
+import { compose, withProps } from "recompose";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
 const MyMapComponent = compose(
   withProps({
@@ -21,6 +21,8 @@ const MyMapComponent = compose(
 )
 
 class MapContainer extends React.PureComponent {
+
+
   state = {
     isMarkerShown: false,
   }
@@ -36,16 +38,20 @@ class MapContainer extends React.PureComponent {
     this.setState({ isMarkerShown: false })
     this.delayedShowMarker()
   }
+
   render() {
+
     return (
-      <MyMapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick}
-      />
+      <div>
+
+        <MyMapComponent
+          isMarkerShown={this.state.isMarkerShown}
+          onMarkerClick={this.handleMarkerClick}
+        />
+      </div>
+
     )
   }
 }
 
 export default MapContainer;
-
-

@@ -22,6 +22,15 @@
   font-size: large;
 }
 
+.main{
+  background-image: url(./Captura.jpg);
+
+}
+.button{
+  background-image: url(./boton.png);
+  width: 30%;
+  
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
