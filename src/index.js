@@ -1,8 +1,17 @@
+// dependencias
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import {render} from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+// routes
+import Routing from './Routing.js';
+
+
+// import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+// Assets
+import './index.css';
+
+
+render(<Routing />, document.getElementById('root'));
 registerServiceWorker();

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import MapContainer from './Map';
+import { Link } from 'react-router-dom';
+
 import {red500} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import Header from '../../../src/components/Header';
+import Header from '../../src/components/Header';
+import '../App.css';
 
 
 const muiTheme = getMuiTheme({
@@ -15,20 +16,24 @@ const muiTheme = getMuiTheme({
     height: 50,
   },
 });
-
-
-class ContainerMap extends Component{
-
+class Home extends Component {
   render() {
-
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <Header/>
-      <div>
-        <MapContainer/>
-      </div>
-      </MuiThemeProvider>
+      <main className= 'main'>
+        
+        <ul>
+          <li className='button'>
+            <Link to="/google-maps-stateful" className='link'>Ver Recorrido</Link>
+          </li>
+
+        </ul>
+      </main>
+        </MuiThemeProvider>
     );
   }
 }
-export default ContainerMap;
+
+
+export default Home;
